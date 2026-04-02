@@ -7,7 +7,7 @@
     
     # Extra configuration (replaces .gitconfig entries)
     extraConfig = {
-      init.defaultBranch = "master";
+      init.defaultBranch = "main";
       pull.rebase = true;
       core.editor = "nano";
     };
