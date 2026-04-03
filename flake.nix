@@ -16,6 +16,8 @@
     import-tree.url = "github:vic/import-tree";
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
     nixos-asahi-framebuffer-compression.url = "github:oliverbestmann/nixos-asahi-framebuffer-compression";
+    
+
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake

@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       self.nixosModules.macbookHardware
       self.nixosModules.userCollin
+      self.nixosModules.niri
       # Include packages and configurations for apple macbook
       inputs.apple-silicon.nixosModules.apple-silicon-support
       #inputs.nixos-asahi-framebuffer-compression.nixosModules.default
@@ -187,11 +188,6 @@
     };
     backupFileExtension = "backup";
   };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   
 
