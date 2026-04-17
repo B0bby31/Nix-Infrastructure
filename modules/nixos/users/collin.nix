@@ -1,12 +1,12 @@
 { self, inputs, ... }: {
-  flake.nixosModules.userCollin = { lib, config, pkgs, ... }:
+  flake.modules.nixos.userCollin = { lib, config, pkgs, ... }:
 {
   users.users.collin = {
     isNormalUser = true;
     initialPassword = "12345";
     description = "Collin Harcarik";
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" ]; # Enable sudo privileges
+    extraGroups = [ "wheel" "video" "render" "pipewire" "audio" ]; # Enable sudo privileges
   };
 };
 

@@ -1,0 +1,7 @@
+xkb_symbols "mac_intl_nodead" {
+  include "gb(mac_intl)";
+  name[Group1]="English (UK, mac_intl, no dead keys)";
+  key <AE03> { [ 3, numbersign, threesuperior, numbersign ] };
+  key <AC11> { [ apostrophe, quotedbl ] };
+  key <TLDE> { [ grave, asciitilde ] };
+}

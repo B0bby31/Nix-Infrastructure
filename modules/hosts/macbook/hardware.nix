@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.macbookHardware = { config, lib, pkgs, modulesPath, ... }:
+  flake.modules.nixos.macbookHardware = { config, lib, pkgs, modulesPath, ... }:
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
