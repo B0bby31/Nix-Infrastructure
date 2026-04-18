@@ -11,7 +11,7 @@
             niriMacbook
             stylixMacbook
             alacritty
-            # vscode
+            zsh
             # passwordManager
           ];
 
@@ -31,19 +31,6 @@
     home.sessionVariables = {
       EDITOR = "nano";
       SSH_AUTH_SOCK = "/home/collin/.bitwarden-ssh-agent.sock";
-    };
-
-    programs.zsh = {
-      enable = true;
-      shellAliases = {
-        ll = "ls -l";
-        update = "sudo nixos-rebuild switch";
-      };
-      history.size = 10000;
-      oh-my-zsh = {
-        enable = true;
-        theme = "robbyrussell";
-      };
     };
 
     # Let Home Manager install and manage itself.

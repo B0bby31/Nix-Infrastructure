@@ -6,5 +6,6 @@
         window.decorations = "None";
       };
     };
+
   };
 }

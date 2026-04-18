@@ -14,7 +14,7 @@
       self.modules.nixos.nautilus
       # Include packages and configurations for apple macbook
       inputs.apple-silicon.nixosModules.apple-silicon-support
-      inputs.nixos-asahi-framebuffer-compression.nixosModules.default
+      #inputs.nixos-asahi-framebuffer-compression.nixosModules.default
       # Include home manager
       inputs.home-manager.nixosModules.default
     ];

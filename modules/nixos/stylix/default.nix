@@ -8,10 +8,11 @@
     stylix.image = ./geisha_original.png;
     stylix.polarity = "dark";
     
-
- 
+    # Add relevant fonts
+    
     stylix.fonts = {
       monospace = {
+        package = pkgs.nerd-fonts.meslo-lg;
       };
       sansSerif = {
       };
