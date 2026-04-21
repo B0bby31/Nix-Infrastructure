@@ -2,10 +2,8 @@
   flake.modules.homeManager.zsh = { lib, ... }: {
 
     # We also enable starship, cause what is the point of zsh without it
-    programs.starship = {
-      enable = true;
-      enableZshIntegration = true;     
-    };
+    programs.starship.enable = true;
+
 
     programs.fastfetch = {
       enable = true;
@@ -14,7 +12,13 @@
     programs.zsh = {
       enable = true;
       autosuggestion.enable = true;
-    
+      syntaxHighlighting.enable = true;
+
+      oh-my-zsh = { # "ohMyZsh" without Home Manager
+        enable = true;
+        plugins = [ "starship" ];
+      };
+
       initContent = let
         zshConfigEarlyInit = lib.mkOrder 500 ''
           fastfetch

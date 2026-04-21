@@ -4,6 +4,12 @@
       inputs.dms.nixosModules.greeter
     ];
 
+    # Enable autologin on boot
+    services.displayManager.autoLogin = {
+      enable = true;
+      user = "collin";
+    };
+
     programs.dank-material-shell.greeter = {
       enable = true;
       compositor.name = "niri";

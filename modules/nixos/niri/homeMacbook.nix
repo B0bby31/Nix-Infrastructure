@@ -4,6 +4,13 @@
       settings = {
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
+        prefer-no-csd = true;
+
+        hotkey-overlay = {
+          skip-at-startup = true;
+          hide-not-bound = true;
+        };
+
         input.keyboard = {
           xkb = {
             layout = "us";
@@ -16,7 +23,9 @@
         };
         gestures.hot-corners.enable = false;
 	
-
+        spawn-at-startup = [
+          #{ argv = "${lib.getExe pkgs.bitwarden-desktop}"; }
+        ];
 
         binds = {
           "XF86AudioRaiseVolume" = {
